@@ -1,5 +1,8 @@
 ---
+const pageTitle = 'Blog About Page'
+const colors = ['red', 'green', 'blue']
 
+const day = 'Monday'
 ---
 
 <html lang="en">
@@ -8,17 +11,29 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
 
-		<h1>Blog Site About Page</h1>
+		<h1>{pageTitle}</h1>
 
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem similique tempora, dignissimos animi ut iusto repellat quidem beatae laboriosam nostrum officia nam aut minus eaque enim magnam minima quaerat!
         </p>
+
+        <ul>
+            {
+                colors.map((color) => <li>{color}</li>)
+            }
+        </ul>
+
+        <div>
+             {
+                day !== 'Monday' ? <p>Today is {day}</p> : <p>Today is not {day}</p>
+             }
+        </div>
 	</body>
 </html>
