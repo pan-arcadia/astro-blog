@@ -3,6 +3,8 @@ const pageTitle = 'Blog About Page'
 const colors = ['red', 'green', 'blue']
 
 const day = 'Monday'
+
+const listColor = 'navy'
 ---
 
 <html lang="en">
@@ -12,6 +14,18 @@ const day = 'Monday'
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+
+        <style define:vars={{listColor}}>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+
+            .list-item {
+                color: var(--listColor);
+                font-weight: bold;
+            }
+        </style>
 	</head>
 	<body>
         <a href="/">Home</a>
@@ -26,7 +40,7 @@ const day = 'Monday'
 
         <ul>
             {
-                colors.map((color) => <li>{color}</li>)
+                colors.map((color) => <li class="list-item">{color}</li>)
             }
         </ul>
 
