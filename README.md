@@ -12,3 +12,5 @@ Things we'll learn about:
 - Deploy our site to the web
 
 We can see the [Blog Tutorial Demo](https://stackblitz.com/github/withastro/blog-tutorial-demo/tree/complete?file=src%2Fpages%2Findex.astro).
+
+The repository for this tutorial is [astro-blog](https://github.com/pan-arcadia/astro-blog).
